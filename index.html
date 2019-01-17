@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Room 207 Escape Trivia</title>
+        <link href="https://fonts.googleapis.com/css?family=Libre+Barcode+128+Text|ZCOOL+QingKe+HuangYou" rel="stylesheet">
+        <link rel="shortcut icon" href="assets/images/logo copy 3.png">
+        <link rel="stylesheet" href="assets/css/style.css">
+
+    </head>
+    <body>
+        <div id="welcome">
+            <div class="welcomeButton" id="welcomeButton">BEGIN</div>
+            <h1>Room 207 Escape Trivia Game</h1>
+        </div>
+            
+        <div class="meme" id="meme" style="display:none">
+            <div style="width:100%;height:0;padding-bottom:41%;position:relative;"><iframe src="https://giphy.com/embed/IUjaKjjPPbGaQ" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p id="enterButton" class="enterButton">ENTER</p> 
+        </div>
+
+        <div class="escapeRoom" id="escapeRoom" style="display:none">
+            <h2>There are seven doors. For every question you get right, you will gain one key.</h2>
+            <h2>There are five questions. All question must be answered within fifty seconds or you instantly lose the game.</h2>
+            <h2>Once retrieving all five keys, you can pick five out of the seven doors to chose from.</h2>
+            <h2>Each door holds a mystery, but only one will free you from room 207.</h2>
+            <div id="go" class="go">UNDERSTOOD</div>
+        </div>
+
+        <div class="questionPage" id="questionPage" style="display:none"> 
+
+            <img src="assets/images/locked.jpg" height="600" width="1400" class="background">
+
+            <div>
+                <span class="timer">
+                    <h3>Time Remaining: <span id="runTime"></span> seconds</h3>
+                </span>
+                <h3 class="keyHolder">Your Keys:
+                <span>
+                    <img src="assets/images/keys.jpg" id="key1" height="40" width="40" style="visibility: hidden">
+                    <img src="assets/images/keys.jpg" id="key2" height="40" width="40" style="visibility: hidden">
+                    <img src="assets/images/keys.jpg" id="key3" height="40" width="40" style="visibility: hidden">
+                    <img src="assets/images/keys.jpg" id="key4" height="40" width="40" style="visibility: hidden">
+                    <img src="assets/images/keys.jpg" id="key5" height="40" width="40" style="visibility: hidden">
+                </span>
+                </h3>
+
+            </div>
+            
+            <div class="question1" id="question1">
+                <div class="question">Who shares the same birthday as Star Wars day?</div>
+                <div>
+                    <div class="options" id="blake">Blake</div>
+                    <div class="options" id="rightChoice1">Jen Stokes</div>
+                    <div class="options" id="davidD">David D.</div>
+                    <div class="options" id="becky">Becky</div>
+                </div>
+            </div>
+
+            <div class="question1" id="question2" style="display:none">
+                <div class="question">Which sticker does Mark have on BOTH of his laptops?</div>
+                <div>
+                    <div class="options" id="rightChoice2">Avenue Code</div>
+                    <div class="options" id="glasses">Glasses on Apple logo</div>
+                    <div class="options" id="cal">Cal logo</div>
+                    <div class="options" id="google">Google Chrome</div>
+                </div>
+            </div>
+
+            <div class="question1" id="question3" style="display:none">
+                <div class="question">If an animal was in medical danger, who would know what to do?</div>
+                <div>
+                    <div class="options" id="maris">Maris</div>
+                    <div class="options" id="belinda">Belinda</div>
+                    <div class="options" id="rightChoice3">Sergio</div>
+                    <div class="options" id="raymond">Raymonnd</div>
+                </div>
+            </div>
+
+            <div class="question1" id="question4" style="display:none">
+                <div class="question">The only person in this group that has a twin is: </div>
+                <div>
+                    <div class="options" id="rightChoice4">Lauren B.</div>
+                    <div class="options" id="braedon">Braedon</div>
+                    <div class="options" id="mark">Mark</div>
+                    <div class="options" id="rachel">Rachel</div>
+                </div>
+            </div>
+
+            <div class="question1" id="question5" style="display:none">
+                <div class="question">He was born and raised in Hawaii and can even play the ukulele, he is: </div>
+                <div>
+                    <div class="options" id="jr">JR</div>
+                    <div class="options" id="davidS">David S.</div>
+                    <div class="options" id="rightChoice5">Nico</div>
+                    <div class="options" id="clifton">Clifton</div>
+                </div>
+            </div>
+            
+            <div class="question1" id="beforeUnlock" style="display:none">
+                <div class="question">Please click on the last key to unlock the door options</div>
+            </div>
+
+        </div>
+
+
+        <div class="unlocked" id="unlocked" style="display:none">
+            <img src="assets/images/unlocked.jpg" height="600" width="1400">
+            <div class="showDoors" id="showDoors"> </div>
+        </div>
+
+        <div class="gameOver" id="gameOver" style="display:none">
+            <div style="width:100%;height:0;padding-bottom:80%;position:relative;"><iframe src="https://giphy.com/embed/dkuZHIQsslFfy" width="1400" height="700" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div>
+        </div>
+
+        <div id="doorOptions" class="doorOptions" style="display:none">
+            <span >
+                <span class="door" id="door1">
+                    Door One
+                </span>
+
+                <span class="door" id="door2">
+                    Door Two
+                </span>
+        
+                <span class="door" id="door3">
+                    Door Three
+                </span>
+                <span class="edit">
+                    <span class="door" id="door4">
+                        Door Four
+                    </span>
+
+                    <span class="door" id="door5">
+                        Door Five
+                    </span>
+
+                    <span class="door" id="door6">
+                        Door Six
+                    </span>
+
+                    <span class="door" id="door7">
+                        Door Seven
+                    </span>
+                </span>
+            </span>
+
+            <div class="instructions">
+                <h3>Click on the keys to go back to your options</h3>
+                <h3>You have five tries to find the right door</h3>
+            </div>
+        </div>
+
+        <div class="wrongDoor" id="death" style="display:none">
+                <img src="assets/images/Gifs/death.gif" height="600" width="1400" >
+                
+        </div>
+
+        <div class="wrongDoor" id="dimension" style="display:none">
+            <img src="assets/images/Gifs/demension.gif" height="600" width="1400" >
+            
+        </div>
+
+        <div class="wrongDoor" id="space" style="display:none">
+                <img src="assets/images/Gifs/space.gif" height="600" width="1400" >
+                
+        </div>
+
+        <div class="wrongDoor" id="dimension2" style="display:none">
+                <img src="assets/images/Gifs/dimension2.gif" height="600" width="1400" >
+                
+        </div>
+
+        <div class="wrongDoor" id="freedom" style="display:none">
+                <img src="assets/images/Gifs/freedom 2.gif"  height="600" width="1400" >
+                <h3>You are free! Thanks for playing!</h3>
+                
+        </div>
+
+        <div class="wrongDoor" id="newWorld" style="display:none">
+                <img src="assets/images/Gifs/newWorld.gif" height="600" width="1400" >
+                
+        </div>
+
+        <div class="wrongDoor" id="float" style="display:none">
+                <img src="assets/images/Gifs/float.gif" height="600" width="1400" >
+                
+        </div>
+
+
+
+        <div class="keys" id="keys" style="display:none">
+                <h3 class="keyTitle">Keys left: </h3>
+                    <img src="assets/images/keys.jpg" id="key11" height="40" width="40">
+                    <img src="assets/images/keys.jpg" id="key22" height="40" width="40">
+                    <img src="assets/images/keys.jpg" id="key33" height="40" width="40">
+                    <img src="assets/images/keys.jpg" id="key44" height="40" width="40">
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script> 
+        <script type="text/javascript" src="assets/javascript/app.js"></script>
+    </body>
+</html>
