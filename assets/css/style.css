@@ -185,12 +185,134 @@ h3{
     margin-left: 500px;
 }
 
-@media (max-width: 980px){
+@media (max-width: 990px){
 
-}
+    body{
+        background: url("../images/background.jpg");
+        background-position-x: -800px;
+        background-position-y: -100px;
+        height: 100%;
+        width: 100%;
+    }
 
-@media (max-width: 768px){
+    .welcome{
+        margin-top: 600px;
+        margin-left: -200px;
+    }
 
+    .meme{
+        margin-top: 110px;
+    }
+
+    .enterButton{
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        padding: 10px;
+        width: 90px;
+        height: 30px;
+        background: #000000;
+        -webkit-transition: width 2s; 
+        transition: width 2s;
+        margin-top: 20px;
+        margin-left: 400px;
+    }
+
+    .go{
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+        color: #fff;
+        font-size: 30px;
+        text-align: center;
+        padding: 10px;
+        width: 140px;
+        height: 30px;
+        background: #000000;
+        -webkit-transition: width 2s; 
+        transition: width 2s;
+        margin-left: 400px;
+    }
+
+    .background{
+        margin-left: -8px;
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .timer{
+        margin-top: -580px;
+        margin-left: 0px;
+        float: left;
+        
+    }
+
+    .keyHolder{
+        margin-top: -562px;
+        margin-left: 625px;
+        
+    }
+
+    .options{
+        margin-top: 20px;
+        position: relative;
+        border-style: solid;
+        width: 200px;
+        margin-left: 380px;
+        -webkit-transition: width 1s; 
+        transition: width 1s;
+        transition-timing-function: linear;
+    }
+
+    .unlocked{
+        margin-left: -180px;
+        margin-top: 30px;
+        width: 100%;
+        height: 100%;
+    }
+
+    .doorOptions{
+        margin-left: 50px;
+        margin-top: 300px;
+    }
+
+    .door{
+        border-style: solid;
+        background: #000000;
+        color: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        font-family: 'ZCOOL QingKe HuangYou', cursive;
+        font-size: 20px;
+        width: 100px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    .edit{
+        margin-left: 0px;
+    }
+
+    .instructions{
+        margin-top: 40px;
+        width: 500px;
+        margin-left: 200px;
+    }
+
+    .keys{
+        margin-left: 350px;
+        margin-top: 20px;
+        text-align: center;
+        width: 300px;
+    }
+
+    .wrongDoor{
+        margin-left: -100px;
+    }
+
+    .gameOver{
+        margin-left: -200px;
+    }
 }
 
 @media (max-width: 640px){
